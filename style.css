@@ -4,15 +4,21 @@ body,html {
   overflow: hidden;
 }
 
-h1 {
+header {
     z-index: 10;
+    font-size: 14pt;
     color: #eee;
     position: absolute;
-    left: 20px;
-    top: 20px;
-    padding: 40px;
+    left: 30px;
+    top: 30px;
+    padding: 20px;
     background: black;
     border-radius: 1.2em;
+    text-align: center;
+}
+
+header p {
+    font-size: 11pt;
 }
 
 .keys {
@@ -27,11 +33,11 @@ h1 {
 
 .tile {
   flex-grow: 1;
-  flex-basis: 50px;
+  flex-basis: 80px;
   transition:all .07s;
-  margin: 1px;
+  margin: 2px;
   padding:1rem .5rem;
-  transition:all .07s;
+  transition:all .09s;
   background:#ffc600;
   border-radius: .3em;
 }

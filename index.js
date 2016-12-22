@@ -1,16 +1,21 @@
+//GLOBAL VARIABLES
 var clampMin = 5;
 var clampMax = 250;
 const dataKeys = [65, 83, 68, 70, 71, 72, 74, 75, 76];
-
+var tiles;
+var multis = [(Math.random() > 0.5 ? 1 : -1), (Math.random() > 0.5 ? 1 : -1), (Math.random() > 0.5 ? 1 : -1)];
 var colors = [ Math.floor(Math.random()*(clampMax-10)), Math.floor(Math.random()*(clampMax-10)), Math.floor(Math.random()*(clampMax-10))];
 
-var tiles;
-
-var multis = [(Math.random() > 0.5 ? 1 : -1), (Math.random() > 0.5 ? 1 : -1), (Math.random() > 0.5 ? 1 : -1)];
-
 window.addEventListener('load', function(){
-    populateTiles(350);
+    populateTiles(180);
+    randomizeColors();
 });
+
+function randomizeColors(){
+    colors = [ Math.floor(Math.random()*clampMax), Math.floor(Math.random()*clampMax), Math.floor(Math.random()*clampMax)];
+    setTimeout(randomizeColors, 5000);
+    updateColors();
+}
 
 function populateTiles(amount) {
   var parent = document.querySelector(".keys");
@@ -34,9 +39,9 @@ function createTile(parent) {
 
   parent.appendChild(tile);
 
+  tile.addEventListener('transitionend', removeTransition);
   tile.addEventListener('click', playSound);
   //tile.addEventListener('mouseover', playSound);
-  tile.addEventListener('transitionend', removeTransition);
 }
 
 window.addEventListener('keydown', playSound);
@@ -76,9 +81,8 @@ function updateColors() {
         multis[c] *= -1;  //Reverse the direction of color change
     }
 
-    t.style.background = "rgba("+ colors[0] + "," + colors[1] + "," + colors[2] + ",0.99)";
+    t.style.background = "rgba("+ colors[0] + "," + colors[1] + "," + colors[2] + ",0.9)";
   }
-  //setTimeout(updateColors, 500);
 }
 
 function removeTransition(e){
