@@ -1,0 +1,70 @@
+body,html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  flex:1;
+}
+
+.tile {
+  flex-grow: 1;
+  flex-basis: 50px;
+  transition:all .07s;
+  margin: 1px;
+  padding:1rem .5rem;
+  transition:all .07s;
+  background:#ffc600;
+  border-radius: .3em;
+}
+
+.playing {
+  transform: scale(1.15) rotate(20deg);
+  border-color: white;
+}
+
+.key div {
+  display: block;
+  font-size: 40px;
+}
+
+.sound {
+  display: block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color:#ffc600;
+}
+
+footer {
+  display:flex;
+  justify-content: space-between;
+  color: #eee;
+  width: 100vw;
+  heigth: 10vh;
+  font-size: 16pt;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background: #222;
+  font-family: 'Gochi Hand', cursive;
+}
+
+footer p {
+    margin: 40px 20px;
+}
+
+footer p a:visited {
+    color: #ddd;
+}
+
+footer p a {
+    color: #ddd;
+}
