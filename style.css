@@ -86,9 +86,39 @@ footer p a {
     color: #ddd;
 }
 
+#hide-desktop {
+    display: none;
+}
+#hide-mobile {
+    display: inline;
+}
+
 @media (max-width: 600px) {
     .tile {
         flex-grow: 1;
         flex-basis: 20px;
     }
+
+    header {
+        font-size: 10pt;
+        left: 20px;
+        top: 20px;
+        padding: 8px;
+    }
+
+    footer {
+        font-size: 12pt;
+    }
+
+    footer p {
+        margin: 20px 15px;
+    }
+
+    #hide-desktop {
+        display: inline;
+    }
+    #hide-mobile {
+        display: none;
+    }
+
 }
