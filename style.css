@@ -93,7 +93,7 @@ footer p a {
     display: inline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     .tile {
         flex-grow: 1;
         flex-basis: 20px;
