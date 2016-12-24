@@ -7,7 +7,7 @@ var multis = [(Math.random() > 0.5 ? 1 : -1), (Math.random() > 0.5 ? 1 : -1), (M
 var colors = [ Math.floor(Math.random()*(clampMax-10)), Math.floor(Math.random()*(clampMax-10)), Math.floor(Math.random()*(clampMax-10))];
 
 window.addEventListener('load', function(){
-    populateTiles(180);
+    populateTiles(140);
     randomizeColors();
 });
 
