@@ -34,7 +34,6 @@ header p {
 .tile {
     flex-grow: 1;
     flex-basis: 90px;
-    transition: all .07s;
     margin: 2px;
     padding: 1rem .5rem;
     transition: all .09s;

@@ -36,7 +36,7 @@ function createTile(parent) {
   att = document.createAttribute('data-key');
   att.value = dataKeys[Math.floor(Math.random() * dataKeys.length)];
   tile.setAttributeNode(att);
-
+  
   parent.appendChild(tile);
 
   tile.addEventListener('transitionend', removeTransition);
